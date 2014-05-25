@@ -12,7 +12,7 @@ pip install https://github.com/itsnauman/PyDomainr/archive/0.1.tar.gz
 The URL of the domain is passed in the construct
 ```python
 from pydomainr import PyDomainr
-dom = PyDomainr("google.com")
+dom = PyDomainr("naumanahm.ad")
 print dom.is_available
 ```
 
@@ -20,6 +20,14 @@ print dom.is_available
 This will return the Whois URL of the domain
 ```python
 from pydomainr import PyDomainr
-dom = PyDomainr("google.com")
+dom = PyDomainr("naumanahm.ad")
 print dom.whois_url
 ```
+####3 Get A List Of Available Domains
+This method will return the list of domains available
+```python
+from pydomainr import PyDomainr
+dom = PyDomainr("naumanahm.ad")
+for each_domain in dom.available_domains():
+      print each_domain
+````
