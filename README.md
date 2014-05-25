@@ -32,7 +32,7 @@ for each_domain in dom.available_domains():
       print each_domain
 ````
 
-####4. Get A list Of Domains Taken
+####4. Get A list Of Domains That Are Taken
 A List of taken lists are returned
 ```python
 from pydomainr import PyDomainr
