@@ -44,36 +44,6 @@ class PyDomainr(object):
             #Other return types are tld or maybe
             return self.available
 
-    def available_domains(self):
-        """
-        This method goes through the 6 domains and checks for the availability
-        and returns a list
-        """
-        self.domains = []
-        self.json_response = self._api_search()
-        self.result = self.json_response['results']
-        i = 0
-        while i < 6:
-            if self.result[i]['availability'] == 'available':
-                self.domains.append(self.result[i]['domain'])
-            i += 1
-        return self.domains
-
-    def taken_domains(self):
-        """
-        This method goes through the 6 domains and checks for the domains that
-        are not available and returns a list
-        """
-        self.domains = []
-        self.json_response = self._api_search()
-        self.result = self.json_response['results']
-        i = 0
-        while i < 6:
-            if self.result[i]['availability'] != 'available':
-                self.domains.append(self.result[i]['domain'])
-            i += 1
-        return self.domains
-
     @property
     def whois_url(self):
         """
@@ -83,10 +53,16 @@ class PyDomainr(object):
 
     @property
     def registrar(self):
+        """
+        Returns the registrar's UnboundLocalError
+        """
         return self._api_info()['registrars'][0]['registrar']
 
     @property
     def registrar_name(self):
+        """
+        Returns the registrars name
+        """
         return self._api_info()['registrars'][0]['name']
 
     @property

@@ -1,0 +1,10 @@
+README.rst
+setup.py
+pydomainr/PyDomainr.py
+pydomainr/__init__.py
+pydomainr.egg-info/PKG-INFO
+pydomainr.egg-info/SOURCES.txt
+pydomainr.egg-info/dependency_links.txt
+pydomainr.egg-info/not-zip-safe
+pydomainr.egg-info/requires.txt
+pydomainr.egg-info/top_level.txt
